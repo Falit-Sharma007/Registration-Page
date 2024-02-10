@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<html lan="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+        <title>Registration Page</title>
+        <style>
+            div.container{
+                width: 400px;
+               /* margin: 100px auto 0px auto; */
+                margin-top: 45px;
+                margin-left: auto;
+                margin-right: auto;
+                background-color:rgba(0,0,0,0.5);
+                font-size: 18px;
+                border-radius: 10px;
+            }
+            h2{
+                text-align: center;
+                padding: 20px;
+                font-family: sans-serif;
+                color:white;
+            }
+            body{
+               /* background-image:url(mj.jpg); */
+               background-color: rgb(45, 44, 44);
+            }
+            label{
+                color:white;
+                font-family: sans-serif;
+                font-size:18px;
+                font-style: italic;
+            }
+            input#fname{
+                width:300px;
+                padding:5px;
+                border-color:black;
+            }
+            input#lname{
+                width:300px;
+                padding:5px;
+                border-color:black;
+            }
+            input#email{
+                width:300px;
+                padding:5px;
+                border-color:black;
+            }
+            input#age{
+                width:300px;
+                padding:5px;
+                border-color:black;
+            }
+            input#pn{
+                width:300px;
+                padding:5px;
+                border-color:black;
+            }
+            form{
+                margin:40px;
+                padding:5px;
+                border-color:black;
+            }
+            input#submit{
+                width:100px;
+                padding: 5px;
+                font-family: sans-serif;
+                margin-bottom:20px;
+                background-color: brown;
+                color:white;
+                border:azure;
+            }
+            #txt{
+                color:red;
+                font-size: 15px;
+            }
+            #txt2{
+                color:red;
+                font-size: 15px;
+            }
+            #txt3{
+                color:red;
+                font-size: 15px;
+            }
+            #txt4{
+                color:red;
+                font-size: 15px;
+            }
+            #txt5{
+                color:red;
+                font-size: 15px;
+            }
+
+        
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h2>Register Here</h2>
+            <form name="myForm">
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>First Name :</label>
+                        <br>
+                        <input type="text" name="fname" id="fname" placeholder="Enter Your First Name">
+                        <span id="txt"></span>
+                        <br><br>
+                        <label>Last Name :</label>
+                        <br>
+                        <input type="text" name="lname" id="lname" placeholder="Enter Your Last Name">
+                        <span id="txt2"></span>
+                        <br><br>
+                        <label>Email :</label>
+                        <br>
+                        <input type="email" name="email" id="email" placeholder="Enter Your Valid Email">
+                        <span id="txt3"></span>
+                        <br><br>
+                        <label>Age :</label>
+                        <br>
+                        <input type="number" name="age" id="age" placeholder="Enter Your Age">
+                        <span id="txt4"></span>
+                        <br><br>
+                        <label>Phone Number :</label>
+                        <br>
+                        <input type="phone" name="pn" id="pn" placeholder="Enetr Your Phone Number">
+                        <span id="txt5"></span>
+                        <br><br>
+                        <input type="button" value="Submit" name="submit" id="submit" onclick="test()">
+                    </div>
+                </div>
+            </form>
+            <script>
+                function test(input){
+            const ui=document.getElementById('fname').value
+            if(ui==""){
+                document.getElementById('txt').innerHTML="Field should not be blank"
+            }else{
+                //alert("Welcome "+ui+" "+vi)
+            }
+            const vi=document.getElementById('lname').value
+            if(vi==""){
+                document.getElementById('txt2').innerHTML="Field should not be blank"
+            }else{
+                //alert("Welcome "+ui+" "+vi)
+            }
+            const em=document.getElementById('email').value
+            if(em==""){
+                document.getElementById('txt3').innerHTML="Field should not be blank"
+            }else{
+                //alert("Welcome "+ui+" "+vi)
+            }
+            const ag=document.getElementById('age').value
+            if(ag==""){
+                document.getElementById('txt4').innerHTML="Field should not be blank"
+            }else if(ag<1 || ag>100){
+                document.getElementById('txt4').innerHTML="Invalid age"
+            }else{
+                //alert("Welcome "+ui+" "+vi)
+            }
+            const ph=document.getElementById('pn').value
+            if(ph==""){
+                document.getElementById('txt5').innerHTML="Field should not be blank"
+            }else if(ph.length!=10){
+                document.getElementById('txt5').innerHTML="Invalid phone number"
+            }else{
+                alert("Welcome "+ui+" "+vi)
+            }
+          }
+            </script>
+        </div>
+       
+
+    </body>
+</html>
